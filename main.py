@@ -46,15 +46,15 @@ class LoginRequest(BaseModel):
     username: str
     password: str
 
-# "DB" en memoria (usa una sola variable consistente: db)
+# "DB" en memoria 
 db: List[UserInDB] = []
 
 # Contador simple de intentos (username -> {count, last_attempt_ts, locked_until})
 attempts: Dict[str, Dict] = {}
-MAX_ATTEMPTS = 5
+MAX_ATTEMPTS = 11
 LOCK_SECONDS = 60  # bloqueo temporal de 60s después de MAX_ATTEMPTS fallidos
 
-# Usuario de prueba débil (solo laboratorio)
+# Usuario de prueba débil 
 TEST_USER = "tester_brute"
 TEST_PASS = "123456"
 db.append(UserInDB(
