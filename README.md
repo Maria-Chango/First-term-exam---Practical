@@ -42,7 +42,7 @@ Bash
 uvicorn main:app --reload
 La documentación de la API está disponible en: http://127.0.0.1:8000/docs
 
-4. Demostración de Ataque
+# 4. Demostración de Ataque
 El archivo brute_force_test.sh ejecuta el ataque, iterando sobre el diccionario passwords.txt.
 
 4.1. Ejecución del Script (Terminal Secundaria)
@@ -57,7 +57,7 @@ Uso de xargs y bash -c: Se utiliza para forzar la ejecución de curl por cada l�
 
 Archivos Temporales (attempts.tmp): Se utilizan para contar los intentos y la señal de éxito, ya que el subproceso generado por xargs no puede comunicar directamente sus variables al script principal.
 
-5. Análisis de Resultados
+# 5. Análisis de Resultados
 El ataque fue un éxito rotundo, como se confirma en el archivo brute_force_results.log y en los logs del servidor.
 
 Métrica	-------------Valor -----------------    Observación
@@ -70,14 +70,14 @@ Necesarios	           6	          La contraseña se encontró en el sexto intent
 Vulnerabilidad	Ausencia de Mitigación	El endpoint respondió al intento 1 y al intento 6.
 
 
-6. Conclusiones de Seguridad y Mitigación
+# 6. Conclusiones de Seguridad y Mitigación
 
 La prueba confirma que una contraseña débil, en un entorno sin defensa, resulta en un compromiso instantáneo de la cuenta.
 
- Riesgo Principal: Cuentas Comprometidas
+Riesgo Principal: Cuentas Comprometidas
 La debilidad principal del sistema es la falta de cualquier mecanismo de defensa proactivo. El servidor asume que todos los intentos fallidos son legítimos y procesa la petición de forma instantánea.
 
- Estrategias de Mitigación Recomendadas
+Estrategias de Mitigación Recomendadas
 Para asegurar el endpoint /login, se deben implementar las siguientes medidas:
 
 Rate Limiting (Control de Tasa):
