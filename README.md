@@ -21,7 +21,7 @@ Datos--------Pydantic--------------Validacion de esquemas y tipado de datos.
 Entorno------Python 3.[X]----------Entorno de ejecución.
 
 
-🚧 Usuario de Prueba para el Ataque
+Usuario de Prueba para el Ataque
 La API se inicializa con el siguiente usuario vulnerable para las pruebas:
 
 Usuario: tester_brute
@@ -74,10 +74,10 @@ Vulnerabilidad	Ausencia de Mitigación	El endpoint respondió al intento 1 y al 
 
 La prueba confirma que una contraseña débil, en un entorno sin defensa, resulta en un compromiso instantáneo de la cuenta.
 
-🔴 Riesgo Principal: Cuentas Comprometidas
+ Riesgo Principal: Cuentas Comprometidas
 La debilidad principal del sistema es la falta de cualquier mecanismo de defensa proactivo. El servidor asume que todos los intentos fallidos son legítimos y procesa la petición de forma instantánea.
 
-✅ Estrategias de Mitigación Recomendadas
+ Estrategias de Mitigación Recomendadas
 Para asegurar el endpoint /login, se deben implementar las siguientes medidas:
 
 Rate Limiting (Control de Tasa):
