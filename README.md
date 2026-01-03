@@ -1,4 +1,4 @@
-Proyecto FastAPI: Análisis de Vulnerabilidad por Fuerza Bruta
+# Proyecto FastAPI: Análisis de Vulnerabilidad por Fuerza Bruta
 Índice
 -Introducción y Propósito
 -Stack Tecnológico
@@ -7,12 +7,12 @@ Proyecto FastAPI: Análisis de Vulnerabilidad por Fuerza Bruta
 -Análisis de Resultados
 -Conclusiones de Seguridad y Mitigación
 
-1. Introducción y Propósito
+# 1. Introducción y Propósito
 Este proyecto implementa una API REST de gestión de usuarios.El propósito principal es demostrar la criticidad de la vulnerabilidad de credenciales débiles.
 
 Utilizamos un script de fuerza bruta personalizado para atacar el endpoint de login y exponer la facilidad con la que un atacante puede comprometer una cuenta con una contraseña común.
 
-2. Stack Tecnológico
+# 2. Stack Tecnológico
 Componente	/// Tecnología      ///   Función
 Framework----FastAPI----------------Core de la API.
 Seguridad----Passlib (bcrypt)-------Hashing seguro de contraseñas.
@@ -21,13 +21,13 @@ Datos--------Pydantic--------------Validacion de esquemas y tipado de datos.
 Entorno------Python 3.[X]----------Entorno de ejecución.
 
 
-Usuario de Prueba para el Ataque
+# Usuario de Prueba para el Ataque
 La API se inicializa con el siguiente usuario vulnerable para las pruebas:
 
 Usuario: tester_brute
 Contraseña: 123456 (Vulnerable)
 
-3. Configuración del Entorno
+# 3. Configuración del Entorno
 
 3.1. Requisitos e Instalación
 Bash
